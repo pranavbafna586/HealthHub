@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment</title>
+  <style>
+  body {
+    background-image: url(https://wallpaperaccess.com/full/1282794.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px 20px; /* Added left and right padding */
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-top: 0; /* Added top margin to create space */
+  }
+  
+  select {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden; /* Added to ensure sparkles are visible */
+  }
+  
+  .sparkles::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #FFF;
+    top: -10px;
+    animation: sparkles 1s infinite;
+  }
+  
+  .sparkles::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #FFF;
+    top: -10px;
+    animation: sparkles 1.5s infinite;
+  }
+  
+  @keyframes sparkles {
+    0% {
+      opacity: 0;
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(100px) rotate(720deg);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select a Hospital:</h1>
+    <form id="hospitalForm">
+      <select id="hospitalList">
+        <option value="" selected disabled>Select a hospital</option>
+        <option value="https://www.rubyhall.com">Ruby Hall Clinic</option>
+        <option value="https://www.hospital2.com">Jehangir Hospital</option>
+        <option value="https://www.dmhospital.org">Deenanath Mangeshkar Hospital</option>
+        <option value="https://www.sahyadrihospital.com">Sahyadri Super Speciality Hospital</option>
+        <option value="https://www.adityabirlahospital.com">Aditya Birla Memorial Hospital</option>
+        <option value="https://www.columbiaasia.com">Columbia Asia Hospital</option>
+        <option value="https://kemhospitalpune.org/">KEM Hospital</option>
+      </select>
+      <button type="button" onclick="redirect()">Go</button>
+    </form>
+    <div class="sparkles"></div>
+  </div>
+
+  <script>
+    function redirect() {
+      var selectedHospital = document.getElementById("hospitalList").value;
+      if (selectedHospital) {
+        window.location.href = selectedHospital;
+      }
+    }
+  </script>
+</body>
+</html>
