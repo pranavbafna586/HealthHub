@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check ME</title>
+    <style>
+         body {
+            background-image: url(https://images.ctfassets.net/76f8cs5bg9si/5PYGtEvcSzWjPbx4V7i08z/c4b06346c25aa22203e277363dd3c129/Screen_Shot_2020-08-17_at_2.48.21_PM.png?w=1820&h=734&q=100&fm=webp);
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BMI and Sugar Level Checker</h1>
+
+    <label for="sugar_level">Sugar Level:</label>
+    <input type="number" id="sugar_level">
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height">
+
+    <p id="result"></p>
+
+    <button onclick="checkMe()">Check</button>
+    <button onclick="closeWindow()">Close</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

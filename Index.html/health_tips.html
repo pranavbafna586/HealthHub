@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Tips</title>
+    <style>
+        body {
+            background-image: url(https://thumbs.dreamstime.com/z/abstract-background-medical-substance-molecules-118685427.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        p, li {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health Tips</h1>
+    </header>
+
+    <main class="container">
+        <p>Here are some health tips:</p>
+
+        <ul id="tipsList">
+            <li onclick="showTipDescription(this)">Get plenty of sleep</li>
+            <li onclick="showTipDescription(this)">Exercise regularly</li>
+            <li onclick="showTipDescription(this)">Eat a balanced diet</li>
+            <li onclick="showTipDescription(this)">Stay hydrated</li>
+            <li onclick="showTipDescription(this)">Wash your hands frequently </li>
+            <li onclick="showTipDescription(this)">Reduce stress</li>
+            <li onclick="showTipDescription(this)">Limit screen time</li>
+            <li onclick="showTipDescription(this)">Avoid smoking and tobacco use </li>
+            <li onclick="showTipDescription(this)">Get regular check-ups </li>
+            <li onclick="showTipDescription(this)">Maintain social connections </li>
+            <li onclick="showTipDescription(this)"> Limit alcohol consumption</li>
+            <li onclick="showTipDescription(this)">Practice good posture</li>
+        </ul>
+
+        <p id="tipDescription"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
