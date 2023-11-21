@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance</title>
+    <style>
+        .button-34 {
+  background: #3498db;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px -10px rgba(52, 152, 219, 0.7);
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+ 
+           
+}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .insurance-section {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-now-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+  text-decoration: none;
+}
+
+
+
+        h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        dl {
+            margin: 0;
+            padding: 0;
+        }
+
+        dt {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        dd {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+
+        dt:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="insurance-section">
+        <h3>Frequently Asked Questions</h3>
+        <dl>
+            <dt onclick="toggleAnswer('q1')">Q: What is health insurance?</dt>
+            <dd id="q1" style="display: none;">Health insurance is a type of coverage that pays for medical and surgical expenses incurred by the insured. It can also provide coverage for other types of health-related expenses, such as prescription drugs, preventive care, and mental health services.</dd>
+    
+            <dt onclick="toggleAnswer('q2')">Q: Why is health insurance necessary?</dt>
+            <dd id="q2" style="display: none;">Health insurance is necessary for several reasons:
+                <ul>
+                    <li>Financial Protection: It helps protect individuals and families from high and unexpected medical costs.</li>
+                    <li>Access to Healthcare: Health insurance increases access to a wide range of medical services.</li>
+                    <li>Preventive Care: Many health insurance plans cover preventive services at no extra cost.</li>
+                    <li>Legal Requirement: In some places, having health insurance is a legal requirement.</li>
+                    <li>Failing to have coverage may result in penalties.
+                    </li>
+                </ul>
+            </dd>
+            <dt onclick="toggleAnswer('q3')">Q: How does health insurance work? </dt>
+            <dd id="q3" style="display: none;"> Health insurance typically involves paying a regular premium to an insurance company. In return, the insurance company covers a portion of the insured person's medical expenses. The individual may also be responsible for certain out-of-pocket costs, such as deductibles, co-payments, and co-insurance.
+
+            </dd>
+            <dt onclick="toggleAnswer('q4')">Q: What does health insurance cover?
+            </dt>
+            <dd id="q4" style="display: none;">  The coverage provided by health insurance can vary, but it often includes:
+
+                Hospitalization: Inpatient and outpatient services in hospitals.
+                Doctor Visits: Consultations with healthcare providers.
+                Prescription Drugs: Medications prescribed by doctors.
+                Preventive Services: Immunizations, screenings, and check-ups.
+                Emergency Care: Treatment for sudden and severe medical conditions.
+                Mental Health Services: Therapy and counseling.                
+            </dd>
+            <dt onclick="toggleAnswer('q5')">Q: Can I choose my healthcare providers with health insurance?
+            </dt>
+            <dd id="q5" style="display: none;"> Many health insurance plans have networks of preferred providers. Choosing providers within the network often results in lower out-of-pocket costs. Some plans also offer coverage for out-of-network providers, but at a higher cost to the insured.
+
+            </dd>
+        </dl>
+        <a href="https://www.policybazaar.com/" target="_blank" class="book-now-button"><button class="button-34" role="button">Book Your Insurance Now!!</button></a>
+    </section>
+
+    <script>
+        function toggleAnswer(questionId) {
+            var answer = document.getElementById(questionId);
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
