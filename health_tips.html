@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Health Tips</title>
     <style>
@@ -9,16 +10,24 @@
             background-size: cover;
             font-family: Arial, sans-serif;
         }
+
         .container {
             max-width: 300px;
             margin: 0 auto;
             padding: 30px;
         }
-        p, li {
+
+        p,
+        li {
             font-weight: bold;
+        }
+
+         .pointer {
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Health Tips</h1>
@@ -28,18 +37,19 @@
         <p>Here are some health tips:</p>
 
         <ul id="tipsList">
-            <li onclick="showTipDescription(this)">Get plenty of sleep</li>
-            <li onclick="showTipDescription(this)">Exercise regularly</li>
-            <li onclick="showTipDescription(this)">Eat a balanced diet</li>
-            <li onclick="showTipDescription(this)">Stay hydrated</li>
-            <li onclick="showTipDescription(this)">Wash your hands frequently </li>
-            <li onclick="showTipDescription(this)">Reduce stress</li>
-            <li onclick="showTipDescription(this)">Limit screen time</li>
-            <li onclick="showTipDescription(this)">Avoid smoking and tobacco use </li>
-            <li onclick="showTipDescription(this)">Get regular check-ups </li>
-            <li onclick="showTipDescription(this)">Maintain social connections </li>
-            <li onclick="showTipDescription(this)"> Limit alcohol consumption</li>
-            <li onclick="showTipDescription(this)">Practice good posture</li>
+            
+            <li class="pointer"  onclick="showTipDescription(this)">Get plenty of sleep</li>
+            <li class="pointer" onclick="showTipDescription(this)">Exercise regularly</li>
+            <li class="pointer" onclick="showTipDescription(this)">Eat a balanced diet</li>
+            <li class="pointer" onclick="showTipDescription(this)">Stay hydrated</li>
+            <li class="pointer" onclick="showTipDescription(this)">Wash your hands frequently </li>
+            <li class="pointer" onclick="showTipDescription(this)">Reduce stress</li>
+            <li class="pointer" onclick="showTipDescription(this)">Limit screen time</li>
+            <li class="pointer" onclick="showTipDescription(this)">Avoid smoking and tobacco use </li>
+            <li class="pointer" onclick="showTipDescription(this)">Get regular check-ups </li>
+            <li class="pointer" onclick="showTipDescription(this)">Maintain social connections </li>
+            <li class="pointer" onclick="showTipDescription(this)"> Limit alcohol consumption</li>
+            <li class="pointer" onclick="showTipDescription(this)">Practice good posture</li>
         </ul>
 
         <p id="tipDescription"></p>
@@ -47,4 +57,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
