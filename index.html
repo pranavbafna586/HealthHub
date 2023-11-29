@@ -160,16 +160,6 @@
         </script>
         <script src="https://www.chatbase.co/embed.min.js" chatbotId="n7dQ92nsmOJa0PIg8UOJ6" domain="www.chatbase.co" defer></script>
     </div>
-    <!-- Toggle Chatbot Script -->
-    <script>
-        const chatbotContainer = document.getElementById('chatbot-container');
-        const chatbotIcon = document.getElementById('chatbot-icon');
-
-        chatbotIcon.addEventListener('click', () => {
-            chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
-        });
-    </script>
-
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -218,14 +208,23 @@
   <br>
   <a href="dashboard.html">
     <button class="button-33" role="button">Dashboard</button>
-  </a>  
-<script>
-  // JavaScript for button click event and redirection
-  document.getElementById('dashboardButton').addEventListener('click', function() {
-    // Redirect to the personal dashboard URL
-    window.location.href = 'your_dashboard_url_here';
-  });
-</script>  
+  </a> 
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <p id="success-message"></p>
+</div>
+ 
 </body>
 
 </html>

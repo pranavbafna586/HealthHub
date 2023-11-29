@@ -239,3 +239,14 @@ if (selectedHospitalInfo) {
     errorLabel.style.display = 'block';
 }
 }
+const chatbotContainer = document.getElementById('chatbot-container');
+const chatbotIcon = document.getElementById('chatbot-icon');
+
+chatbotIcon.addEventListener('click', () => {
+    chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
+});
+ // JavaScript for button click event and redirection
+ document.getElementById('dashboardButton').addEventListener('click', function() {
+    // Redirect to the personal dashboard URL
+    window.location.href = 'your_dashboard_url_here';
+  });
