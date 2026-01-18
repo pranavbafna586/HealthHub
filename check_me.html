@@ -1,41 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Check ME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Checker - HealthHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-         body {
-            background-image: url(https://images.ctfassets.net/76f8cs5bg9si/5PYGtEvcSzWjPbx4V7i08z/c4b06346c25aa22203e277363dd3c129/Screen_Shot_2020-08-17_at_2.48.21_PM.png?w=1820&h=734&q=100&fm=webp);
-            background-repeat: repeat;
-            background-size: auto;
-            font-family: Arial, sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
         .container {
-            max-width: 300px;
+            max-width: 550px;
+            width: 100%;
             margin: 0 auto;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            color: #374151;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-size: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            background: white;
+            color: #1f2937;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:hover {
+            border-color: #2563eb;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        #result {
+            margin: 1.5rem 0;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-radius: 0.75rem;
+            border-left: 4px solid #2563eb;
+            color: #1e40af;
+            font-weight: 500;
+            min-height: 3rem;
+            display: none;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        #result.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #result.success {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left-color: #10b981;
+            color: #065f46;
+        }
+
+        #result.warning {
+            background: linear-gradient(135deg, #fed7aa 0%, #fde68a 100%);
+            border-left-color: #f59e0b;
+            color: #92400e;
+        }
+
+        #result.danger {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left-color: #ef4444;
+            color: #991b1b;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        button.btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+        }
+
+        button.btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        button.btn-secondary {
+            background: white;
+            color: #6b7280;
+            border: 2px solid #e5e7eb;
+        }
+
+        button.btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>BMI and Sugar Level Checker</h1>
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.5rem;">
+                <span style="color: #2563eb;">Health</span><span style="color: #8b5cf6;">Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <button class="btn btn-primary btn-sm">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>🩺 Health Checker</h1>
+        <p class="subtitle">Check your BMI and Sugar Level</p>
 
-    <label for="sugar_level">Sugar Level:</label>
-    <input type="number" id="sugar_level">
+        <div class="form-group">
+            <label for="sugar_level">Blood Sugar Level (mg/dL)</label>
+            <input type="number" id="sugar_level" placeholder="Enter sugar level..." min="0">
+        </div>
 
-    <label for="weight">Weight (kg):</label>
-    <input type="number" id="weight">
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter your weight..." min="0" step="0.1">
+        </div>
 
-    <label for="height">Height (cm):</label>
-    <input type="number" id="height">
+        <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="Enter your height..." min="0" step="0.1">
+        </div>
 
-    <p id="result"></p>
+        <div id="result"></div>
 
-    <button onclick="checkMe()">Check</button>
-    <button onclick="closeWindow()">Close</button>
+        <div class="button-group">
+            <button onclick="checkMe()" class="btn-primary">Check Now</button>
+            <button onclick="closeWindow()" class="btn-secondary">Close</button>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

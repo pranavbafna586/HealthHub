@@ -1,57 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Vinyasa Yoga</title>
-    <style>       
-     body {
-            background-image: url(https://t3.ftcdn.net/jpg/04/87/48/66/360_F_487486623_CatNgUbulZ6rOpENckeTzRfY7IzrqOKd.jpg);
-            background-repeat: repeat;
-            background-size: cover;
-            font-family: Arial, sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyasa Yoga - HealthHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .header {
             text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 2rem;
         }
 
         .yoga-info {
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
         img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
-            border-radius: 5px;
+            margin: 0 auto 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .benefits {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid #2563eb;
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .header {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.5rem;">
+                <span style="color: #2563eb;">Health</span><span style="color: #8b5cf6;">Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <button class="btn btn-primary btn-sm">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <h1 class="header">Vinyasa Yoga</h1>
+        <h1 class="header">🌊 Vinyasa Yoga</h1>
         <div class="yoga-info">
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTCaWejX3EWHE4QQAhNO_72rLw6Yy83KvsE56Whpn4_xFMUaVtR " alt="Vinyasa Yoga Asana">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTCaWejX3EWHE4QQAhNO_72rLw6Yy83KvsE56Whpn4_xFMUaVtR"
+                alt="Vinyasa Yoga Asana">
             <p>
-                Vinyasa Yoga is a dynamic and flowing style of yoga that links breath with movement. 
-                In Vinyasa Yoga, practitioners move through a series of poses in a seamless and fluid manner, 
+                Vinyasa Yoga is a dynamic and flowing style of yoga that links breath with movement.
+                In Vinyasa Yoga, practitioners move through a series of poses in a seamless and fluid manner,
                 synchronized with their breath.
             </p>
             <p>
-                This style of yoga offers a creative and energetic practice that builds strength, flexibility, 
+                This style of yoga offers a creative and energetic practice that builds strength, flexibility,
                 and balance while promoting a sense of mindfulness and meditation in motion.
             </p>
+            <div class="benefits">
+                <strong>💪 Benefits:</strong> Cardiovascular health, improved coordination, stress relief, enhanced
+                focus, and fluid movement patterns.
+            </div>
         </div>
-        <p>Enjoy your Vinyasa Yoga practice and experience the flow of movement and breath!</p>
+        <p style="text-align: center; font-weight: 600;">Enjoy your Vinyasa Yoga practice and experience the flow of
+            movement and breath!</p>
+        <a href="yoga.html" class="back-link">← Back to Yoga Types</a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

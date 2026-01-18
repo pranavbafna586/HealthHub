@@ -1,60 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>HealthHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthHub - Your Personal Health Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" href="img.png" type="image/png">
 </head>
 
-<body>  
-    <nav class="navbar" style="background-color: #e3f2fd;">
+<body>
+    <!-- Modern Navigation -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0.95);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">HealthHub</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="#" style="font-size: 1.5rem;">
+                <span style="color: #2563eb;">Health</span><span style="color: #8b5cf6;">Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        <a class="nav-link fw-semibold" href="dashboard.html">Dashboard</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="appointments.html">Book Appointments</a></li>
-                            <li><a class="dropdown-item" href="health_tips.html">Health Tips</a></li>
-                            <li><a class="dropdown-item" href="check_me.html">Check Me</a></li>
-                            <li><a class="dropdown-item" href="hospitals.html">Hospitals Info</a></li>
-                            <li><a class="dropdown-item" href="doctors_information.html">Doctors Info</a></li>
-                            <li><a class="dropdown-item" href="yoga.html">Yoga</a></li>
-                            <li><a class="dropdown-item" href="insurance.html">Health Insurance</a></li>
+                        <ul class="dropdown-menu shadow-lg border-0" style="border-radius: 0.75rem;">
+                            <li><a class="dropdown-item" href="appointments.html">📅 Book Appointments</a></li>
+                            <li><a class="dropdown-item" href="health_tips.html">💡 Health Tips</a></li>
+                            <li><a class="dropdown-item" href="check_me.html">🩺 Check Me</a></li>
+                            <li><a class="dropdown-item" href="hospitals.html">🏥 Hospitals Info</a></li>
+                            <li><a class="dropdown-item" href="doctors_information.html">👨‍⚕️ Doctors Info</a></li>
+                            <li><a class="dropdown-item" href="yoga.html">🧘 Yoga</a></li>
+                            <li><a class="dropdown-item" href="insurance.html">🛡️ Health Insurance</a></li>
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search" id="search-form">
-                    <input class="form-control me-2" type="search" id="search-input" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>                
+                <form class="d-flex me-3" role="search" id="search-form">
+                    <input class="form-control me-2 shadow-sm border-0" type="search" id="search-input"
+                        placeholder="Search..." aria-label="Search" style="border-radius: 0.5rem;">
+                    <button class="btn btn-primary shadow-sm" type="submit"
+                        style="border-radius: 0.5rem;">Search</button>
+                </form>
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-primary"
+                        style="border-radius: 0.5rem; white-space: nowrap;">Login</a>
+                    <a href="login.html" class="btn btn-primary"
+                        style="border-radius: 0.5rem; white-space: nowrap;">Sign Up</a>
+                </div>
             </div>
         </div>
     </nav>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Welcome to HealthHub!</strong> We're thrilled to have you on board.
+
+    <!-- Welcome Alert -->
+    <div class="alert alert-success alert-dismissible fade show shadow-sm border-0 mx-3 mt-3" role="alert"
+        style="border-radius: 0.75rem;">
+        <strong>🎉 Welcome to HealthHub!</strong> We're thrilled to have you on board. Your health journey starts here!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    
-    <h1 class="heading">Welcome to HealthHub!!</h1>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="heading" style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Your Personal Health
+            Companion</h1>
+        <p class="lead text-center mb-4"
+            style="max-width: 600px; margin: 0 auto; color: rgba(255, 255, 255, 0.95); font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+            Access comprehensive healthcare services, book appointments, track your health, and discover wellness
+            resources all in one place.
+        </p>
+    </div>
+
+    <!-- Services Cards -->
     <div class="cards">
         <a href="appointments.html" class="card" title="Book Appointments">
             <article>
@@ -67,7 +98,7 @@
             </article>
         </a>
 
-       
+
         <a href="health_tips.html" class="card" title="Health Tips">
             <article>
                 <h2>Health Tips</h2>
@@ -81,13 +112,13 @@
             </article>
         </a>
 
-       
+
         <a href="check_me.html" class="card" title="Check Me">
             <article>
                 <h2>Check Me</h2>
                 <div class="desc">
                     <div class="pic">
-                        <img src="https://rb.gy/spemrb" alt="Image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Check Me">
                     </div>
                 </div>
                 <div class="actions">
@@ -100,7 +131,8 @@
                 <h2>Hospitals Info</h2>
                 <div class="desc">
                     <div class="pic">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS89SwrmsDEg-lpDEiywShBJOdEIXAeN8-4g&usqp=CAU" alt="Image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS89SwrmsDEg-lpDEiywShBJOdEIXAeN8-4g&usqp=CAU"
+                            alt="Image">
                     </div>
                 </div>
                 <div class="actions">
@@ -113,7 +145,8 @@
                 <h2>Doctors Info</h2>
                 <div class="desc">
                     <div class="pic">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLtj-kkS-JZNdZpokdwgVFKEx1vGiUKJd9Pg&usqp=CAU" alt="Image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLtj-kkS-JZNdZpokdwgVFKEx1vGiUKJd9Pg&usqp=CAU"
+                            alt="Image">
                     </div>
                 </div>
                 <div class="actions">
@@ -146,10 +179,10 @@
             </article>
         </a>
 
-    </div> 
+    </div>
     <br>
     <br>
-    <br>    
+    <br>
     <div id="chatbot-container" class="chatbot-container" title="HealthHub ChatBot">
         <iframe src="https://www.chatbase.co/chatbot-iframe/n7dQ92nsmOJa0PIg8UOJ6"></iframe>
         <script>
@@ -158,62 +191,82 @@
                 domain: "www.chatbase.co"
             }
         </script>
-        <script src="https://www.chatbase.co/embed.min.js" chatbotId="n7dQ92nsmOJa0PIg8UOJ6" domain="www.chatbase.co" defer></script>
+        <script src="https://www.chatbase.co/embed.min.js" chatbotId="n7dQ92nsmOJa0PIg8UOJ6" domain="www.chatbase.co"
+            defer></script>
     </div>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="news1_details.html">
+                    <img src="https://plus.unsplash.com/premium_photo-1661502783434-ba5b9fba6382?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D"
+                        class="d-block w-100" alt="Healthcare News 1">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Medical Breakthrough Unveiled</h5>
+                    <p>Exciting breakthrough in medical research announced today. Researchers have discovered a new
+                        treatment for a previously incurable disease.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="news2_details.html">
+                    <img src="https://images.unsplash.com/photo-1645005512788-71110dc23393?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhbHRjYXJlfGVufDB8fDB8fHww"
+                        class="d-block w-100" alt="Healthcare News 2">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Healthcare Revolution Unveiled</h5>
+                    <p>New healthcare policies are set to revolutionize the way we approach public health. Learn more
+                        about the changes and their potential impact.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="news3_details.html">
+                    <img src="https://media.istockphoto.com/id/1188933110/photo/medical-equipment-syringe-with-red-tip-on-a-green-background.webp?s=170667a&w=0&k=20&c=dUiqoppWv4xmUIcz9wUB3ieMcsxGg1hg2R85lo0V05I="
+                        class="d-block w-100" alt="Healthcare News 3">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Global Healthcare Advancements</h5>
+                    <p>Innovative technology is transforming patient care. Find out how the latest advancements are
+                        enhancing healthcare services around the world.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <a href="news1_details.html">
-          <img src="https://plus.unsplash.com/premium_photo-1661502783434-ba5b9fba6382?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D" class="d-block w-100" alt="Healthcare News 1">
-        </a>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Medical Breakthrough Unveiled</h5>
-          <p>Exciting breakthrough in medical research announced today. Researchers have discovered a new treatment for a previously incurable disease.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <a href="news2_details.html">
-          <img src="https://images.unsplash.com/photo-1645005512788-71110dc23393?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhbHRjYXJlfGVufDB8fDB8fHww" class="d-block w-100" alt="Healthcare News 2">
-        </a>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Healthcare Revolution Unveiled</h5>
-          <p>New healthcare policies are set to revolutionize the way we approach public health. Learn more about the changes and their potential impact.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <a href="news3_details.html">
-          <img src="https://media.istockphoto.com/id/1188933110/photo/medical-equipment-syringe-with-red-tip-on-a-green-background.webp?s=170667a&w=0&k=20&c=dUiqoppWv4xmUIcz9wUB3ieMcsxGg1hg2R85lo0V05I=" class="d-block w-100" alt="Healthcare News 3">
-        </a>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Global Healthcare Advancements</h5>
-          <p>Innovative technology is transforming patient care. Find out how the latest advancements are enhancing healthcare services around the world.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br>
-  <br>
-  <a href="dashboard.html">
-    <button class="button-33" role="button">Dashboard</button>
-  </a> 
-</div>
-<div class="visme_d" data-title="Expert Blog Subscription" data-url="w47jzwj6-expert-blog-subscription" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="8550">
-  
-</div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
 
+    <!-- Footer / Additional Links -->
+    <div class="text-center py-4">
+        <a href="dashboard.html" class="button-33" role="button">
+            View Dashboard
+        </a>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="container my-5">
+        <div class="visme_d" data-title="Expert Blog Subscription" data-url="w47jzwj6-expert-blog-subscription"
+            data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="8550"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
 </body>
 
 </html>

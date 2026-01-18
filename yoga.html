@@ -1,58 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Yoga</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga - HealthHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-image: url(https://t3.ftcdn.net/jpg/02/16/47/22/240_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg);
-            background-repeat: repeat;
-            background-size: cover;
-            font-family: Arial, sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
         .container {
-            max-width: 600px;
+            max-width: 700px;
+            width: 100%;
             margin: 0 auto;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .header {
             text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .yoga-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
         .yoga-type {
-            display: block;
-            padding: 10px;
-            background-color: #0d2b45;
+            display: flex;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             color: white;
-            font-size: 16px;
-            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-align: left;
             text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .yoga-type:hover {
-            background-color: #154266;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
         }
 
-        p {
-            margin-bottom: 10px;
+        .yoga-type:active {
+            transform: translateY(0);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid #2563eb;
+            color: #1e40af;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .header {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.5rem;">
+                <span style="color: #2563eb;">Health</span><span style="color: #8b5cf6;">Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <button class="btn btn-primary btn-sm">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <h1 class="header">Yoga Types</h1>
-        <a href="hatha_yoga.html" class="yoga-type">Hatha Yoga</a>
-        <a href="vinyasa_yoga.html" class="yoga-type">Vinyasa Yoga</a>
-        <a href="ashtanga_yoga.html" class="yoga-type">Ashtanga Yoga</a>
-        <a href="https://www.rajivdxt.in/yog" class="yoga-type">Explore More</a>
-        <p>Choose a type of yoga that suits your preferences and needs. Enjoy your yoga practice and experience the benefits it brings to your body and mind!</p>
+        <h1 class="header">🧘 Yoga Types</h1>
+        <p class="subtitle">Choose a yoga practice that aligns with your goals and preferences</p>
+
+        <div class="yoga-grid">
+            <a href="hatha_yoga.html" class="yoga-type">🌅 Hatha Yoga</a>
+            <a href="vinyasa_yoga.html" class="yoga-type">🌊 Vinyasa Yoga</a>
+            <a href="ashtanga_yoga.html" class="yoga-type">💪 Ashtanga Yoga</a>
+            <a href="https://www.rajivdxt.in/yog" class="yoga-type" target="_blank">✨ Explore More</a>
+        </div>
+
+        <div class="info-box">
+            Choose a type of yoga that suits your preferences and needs. Enjoy your yoga practice and experience the
+            benefits it brings to your body and mind!
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
